@@ -40,14 +40,14 @@ The token does not expose your Piwigo password or Piwigo API keys.
 
 Open `connect.php` again and click **Revoke** for the token.
 
-## Canva listing links
+## Related Canva app
 
-If GitHub Pages is enabled from `main / docs`, use:
+The Canva app repository is separate:
 
-- Website: `https://pct-br.github.io/Canvaconnector-for-piwigo/`
-- Terms: `https://pct-br.github.io/Canvaconnector-for-piwigo/terms-and-conditions.html`
-- Privacy policy: `https://pct-br.github.io/Canvaconnector-for-piwigo/privacy-policy.html`
-- Support: `https://pct-br.github.io/Canvaconnector-for-piwigo/support.html`
+https://github.com/PCT-BR/Piwigo-Media-forCanva
+
+Canva listing pages, privacy policy, terms, and support pages are hosted from
+the Canva app repository, not from this connector repository.
 
 ## Reviewer note
 

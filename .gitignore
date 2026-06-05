@@ -1,3 +1,5 @@
 .DS_Store
-canva_connector.zip
+*.log
 _data/
+canva_connector.zip
+canva_connector-*.zip

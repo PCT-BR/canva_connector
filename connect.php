@@ -36,7 +36,8 @@ $csrf_token = canva_connector_csrf_token();
     th, td { border-bottom: 1px solid #e4e7eb; padding: 10px; text-align: left; }
     button { border: 0; border-radius: 6px; padding: 9px 14px; background: #00c4cc; color: #061018; cursor: pointer; font-weight: 600; }
     button.secondary { background: #d9e2ec; }
-    input { width: min(100%, 420px); padding: 8px; border: 1px solid #bcccdc; border-radius: 6px; }
+    input { padding: 8px; border: 1px solid #bcccdc; border-radius: 6px; }
+    input { width: min(100%, 420px); }
     ul { line-height: 1.55; }
   </style>
 </head>

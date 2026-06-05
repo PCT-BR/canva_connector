@@ -1,58 +1,46 @@
 # Canva Connector for Piwigo
 
-Canva Connector lets the Canva **Piwigo Media** app connect to a Piwigo
-instance without sending Piwigo API keys or passwords to a central backend.
+Piwigo plugin that connects a Piwigo gallery to the Canva Piwigo Media app.
 
-## Install
+## Features
 
-Upload this folder to:
+- Token-based access for the Canva app, without sharing Piwigo credentials or API keys.
+- Album and photo listing endpoints for Canva.
+- Signed media URLs for faster thumbnail and image loading.
+- Cached thumbnail, preview, and insert variants.
+- Configurable export dimensions and JPEG quality from the Piwigo admin.
+- EXIF orientation handling for generated image variants.
+- Canva export upload back into a selected Piwigo album.
 
-```text
-<piwigo-root>/plugins/canva_connector
-```
+## Installation
 
-Then go to the Piwigo administration area and open:
+1. Copy the `canva_connector` folder into the Piwigo `plugins` directory.
+2. Activate **Canva Connector** from the Piwigo plugin manager.
+3. Open **Canva Connector - Tokens** in the Piwigo admin menu.
+4. Generate a token and paste it into the Canva app with the Piwigo base URL shown on the token page.
 
-```text
-Plugins > Canva Connector
-```
+## Media Settings
 
-while logged in as a Piwigo administrator.
+Open **Canva Connector - Media settings** in the Piwigo admin menu to tune:
 
-## Connect Canva
+- Canva insert maximum dimension and JPEG quality.
+- Preview maximum dimension and JPEG quality.
+- Thumbnail maximum dimension and JPEG quality.
+- PNG conversion policy.
 
-1. Review the access warning.
-2. Click **Authorize and generate token**.
-3. Copy the generated token.
-4. Paste it into the Canva Piwigo Media app.
+The default balanced preset is optimized for responsive Canva browsing while keeping inserted images suitable for most design use cases.
 
-## Permissions
+## Storage
 
-The generated connector token allows Canva Piwigo Media to:
+The connector stores runtime data in Piwigo's `_data` directory:
 
-- list albums
-- read photos selected for insertion into Canva
-- upload Canva exports to a selected album
+- `_data/canva_connector_tokens.json`
+- `_data/canva_connector_config.json`
+- `_data/canva_connector_media_secret`
+- `_data/canva_connector_cache/`
 
-The token does not expose your Piwigo password or Piwigo API keys.
+Do not commit or publish these runtime files.
 
-## Revoke access
+## Release
 
-Open **Plugins > Canva Connector** again and click **Revoke** for the token.
-
-## Related Canva app
-
-The Canva app repository is separate:
-
-https://github.com/PCT-BR/Piwigo-Media-forCanva
-
-Canva listing pages, privacy policy, terms, and support pages are hosted from
-the Canva app repository, not from this connector repository.
-
-## Reviewer note
-
-Piwigo is self-hosted software with user-controlled domains. To avoid routing
-user media or Piwigo credentials through a central third-party service, this app
-uses an open-source connector plugin installed on the user's own Piwigo instance.
-The connector generates a local revocable token after the Piwigo administrator
-reviews and accepts the requested access.
+Current release: `1.0.0`.

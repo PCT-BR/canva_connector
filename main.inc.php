@@ -15,7 +15,7 @@ add_event_handler('get_admin_plugin_menu_links', 'canva_connector_admin_menu');
 
 function canva_connector_admin_menu($menu)
 {
-  $url = get_root_url() . 'plugins/canva_connector/connect.php';
+  $url = get_root_url() . 'plugins/' . basename(dirname(__FILE__)) . '/connect.php';
   if (function_exists('get_admin_plugin_menu_link')) {
     $url = get_admin_plugin_menu_link(dirname(__FILE__) . '/admin.php');
   }

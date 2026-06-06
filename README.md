@@ -30,17 +30,6 @@ Open **Canva Connector - Media settings** in the Piwigo admin menu to tune:
 
 The default balanced preset is optimized for responsive Canva browsing while keeping inserted images suitable for most design use cases.
 
-## Storage
-
-The connector stores runtime data in Piwigo's `_data` directory:
-
-- `_data/canva_connector_tokens.json`
-- `_data/canva_connector_config.json`
-- `_data/canva_connector_media_secret`
-- `_data/canva_connector_cache/`
-
-Do not commit or publish these runtime files.
-
 ## Release
 
 Current release: `1.0.0`.

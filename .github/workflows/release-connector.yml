@@ -6,6 +6,11 @@ on:
     branches:
       - main
     paths:
+      - "*.md"
+      - "*.php"
+      - "api/**"
+      - "include/**"
+      - "template/**"
       - .github/workflows/release-connector.yml
 
 permissions:
